@@ -1,0 +1,61 @@
+#model solution to Class_person
+class Person
+  require "date"
+  
+  attr_accessor :first_name
+  attr_accessor :last_name
+  attr_accessor :birthdate
+
+  def full_name
+    return self.first_name + " " + self.last_name
+  end
+  
+  def age
+    dob = Date.parse(self.birthdate)
+    now = Date.today
+    age_in_days = now - dob
+    age_in_years = age_in_days / 365
+
+    return age_in_years.to_i
+  end
+end
+
+#my solution to Class_person
+class Person
+  require("date")
+  attr_accessor :first_name
+  attr_accessor :last_name
+  attr_accessor :birthdate
+  
+  def Person.parse(first_comma_last)
+    first_last_array = first_comma_last.split(",")
+    the_first_name = first_last_array.at(0).strip
+    the_last_name = first_last_array.at(1).strip
+    
+    new_person = Person.new
+    new_person.first_name = the_first_name
+    new_person.last_name = the_last_name
+    
+    return new_person
+  end
+  
+  def full_name
+    return self.first_name + " " + self.last_name
+  end
+    
+  def age
+    dob = Date.parse(self.birthdate)
+    now = Date.today
+    age_in_days = now - dob
+    age_in_years = age_in_days / 365
+
+    return age_in_years.to_i
+  end
+  
+  cp = Person.new
+    cp.first_name = "Chris"
+    cp.last_name = "Payne"
+    cp.birthdate = "March 6, 1987"
+    cp.full_name
+    cp.age
+end 
