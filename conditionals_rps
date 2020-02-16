@@ -1,0 +1,26 @@
+#mycode
+
+p "Please choose rock, paper, or scissors:"
+
+a = gets.chomp
+p "The computer played scissors"
+if a =="rock"
+    p "You won!"
+elsif a == "paper"
+  p "You lost!"
+else
+
+#model solution
+p "Please choose rock, paper, or scissors:"
+
+player_move = gets.chomp.downcase
+
+p "You played " + player_move + "!"
+
+if player_move == "rock"
+  p "You won!"
+elsif player_move == "paper"
+  p "You lost!"
+else
+  p "You tied!"
+end
