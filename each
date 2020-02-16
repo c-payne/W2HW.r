@@ -1,0 +1,25 @@
+#my code
+p "Enter at least 2 words, separated by spaces:"
+user_words = gets.chomp.split
+p "user words:"
+p user_words
+
+user_words.each do |the_word|
+  p the_word.capitalize,
+    the_word.reverse,
+    the_word.upcase
+end
+
+#model solution
+p "Enter at least 2 words, separated by spaces:"
+user_words = gets.chomp.split
+p "user_words:"
+p user_words
+
+number_of_words = user_words.count
+
+number_of_words.times do |the_index|
+  p user_words.at(the_index).capitalize
+  p user_words.at(the_index).reverse
+  p user_words.at(the_index).upcase
+end
