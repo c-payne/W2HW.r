@@ -1,0 +1,32 @@
+#my code
+numbers = 1
+
+while numbers <= 100
+  
+  if 
+    numbers.to_i%15==0
+    p "FizzBuzz"
+    elsif numbers.to_i%3==0
+    p "Fizz"
+    elsif numbers.to_i%5==0
+    p "Buzz"
+  else 
+    p numbers.to_i
+  end
+  
+  numbers = numbers + 1 
+  
+end
+
+#model solution
+1.upto(100) do |the_number|
+  if the_number % 5 == 0 && the_number % 3 == 0
+    p "FizzBuzz"
+  elsif the_number % 5 == 0
+    p "Buzz"
+  elsif the_number % 3 == 0
+    p "Fizz"
+  else
+    p the_number
+  end
+end
